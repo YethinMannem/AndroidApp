@@ -22,14 +22,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Button for implicit intent (e.g., opening a web page)
         val implicitButton = findViewById<Button>(R.id.implicitButton)
         implicitButton.setOnClickListener {
-                                                                                                                                                                                                                                                                0
-            val intent = Intent("com.example.myandroidapp.OPEN_SECOND_ACTIVITY")
-            startActivity(intent)
+            val impIntent = Intent("com.example.basicapp.OPEN_SECOND_ACTIVITY");
+            startActivity(impIntent);
         }
-
 
         val viewImageButton = findViewById<Button>(R.id.viewImageActivityButton)
         viewImageButton.setOnClickListener {

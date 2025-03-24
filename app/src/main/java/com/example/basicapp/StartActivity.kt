@@ -14,11 +14,12 @@ class StartActivity : AppCompatActivity() {
 
         // List of mobile software engineering challenges
         val challenges = listOf(
-            "1. Device Fragmentation",
-            "2. Battery and Performance Optimization",
-            "3. Security and Privacy Concerns",
-            "4. Keeping Up with OS Updates",
-            "5. Efficient Memory Management"
+            "1. Battery Consumption",
+            "2. Network Issues",
+            "3. Security Concerns",
+            "4. User Interface Design",
+            "5. Performance Optimization",
+            "6. App Store Approval Process"
         )
 
         // Find the TextView and display challenges
