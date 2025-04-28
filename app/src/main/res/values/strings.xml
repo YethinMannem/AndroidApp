@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BasicApp</string>
+    <string name="permission_label">Access Mobile Challenges</string>
+    <string name="permission_description">Allows access to view Mobile Software Engineering challenges in the app.</string>
 </resources>

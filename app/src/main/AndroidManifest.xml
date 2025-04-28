@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.basicapp"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Define custom dangerous permission -->
+    <permission
+        android:name="com.example.basicapp.MSE412"
+        android:label="@string/permission_label"
+        android:description="@string/permission_description"
+        android:protectionLevel="dangerous" />
+
+
+    <!-- ✅ Use the permission -->
+    <uses-permission android:name="com.example.basicapp.MSE412" />
 
     <application
         android:allowBackup="true"
@@ -12,17 +24,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BasicApp"
         tools:targetApi="31">
+
         <activity
             android:name=".CaptureImageActivity"
             android:exported="true" />
+
+        <!-- Protect StartActivity with custom permission -->
         <activity
             android:name=".StartActivity"
-            android:exported="true">
+            android:exported="true"
+            android:permission="com.example.basicapp.MSE412">
             <intent-filter>
                 <action android:name="com.example.basicapp.OPEN_SECOND_ACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
